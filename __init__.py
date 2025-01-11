@@ -1,16 +1,12 @@
-# -*- coding: utf-8 -*-
+"""Export tldextract's public interface."""
 
-# Copyright © Spyder Project Contributors
-# Licensed under the terms of the MIT License
-# (see LICENSE for details)
+from . import _version
+from .tldextract import TLDExtract, extract
 
-"""Three-way merge between two strings with respect to a base one."""
+__version__: str = _version.version
 
-# Local imports
-from .merge import merge
-
-merge
-
-# Package version
-VERSION_INFO = (0, 1, 1)
-__version__ = '.'.join(map(str, VERSION_INFO))
+__all__ = [
+    "extract",
+    "TLDExtract",
+    "__version__",
+]
